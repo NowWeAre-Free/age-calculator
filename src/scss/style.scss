@@ -1,0 +1,7 @@
+@use './reset';
+@use './mixins' as *;
+
+.main {
+    @include flex-column;
+    min-height: 100vh;
+}
