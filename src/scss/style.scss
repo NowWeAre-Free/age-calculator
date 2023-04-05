@@ -1,7 +1,16 @@
 @use './reset';
 @use './mixins' as *;
+@use './variables' as *;
+@use './date';
 
-.main {
+body {
     @include flex-column;
     min-height: 100vh;
+    background-color: $off-white;
+}
+
+.main {
+    width: 100%;
+    max-width: 350px;
+    background-color: $white;
 }
