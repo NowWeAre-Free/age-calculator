@@ -4,12 +4,53 @@
   box-sizing: border-box;
 }
 
-.main {
+.date {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+.date__day {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.date__month {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.date__year {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.date__label {
+  align-items: start;
+}
+.date__input {
+  max-width: 70px;
+  min-height: 40px;
+  border: 1px solid hsl(0deg, 1%, 44%);
+  border-radius: 5px;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  background-color: hsl(0deg, 0%, 94%);
+}
+
+.main {
+  width: 100%;
+  max-width: 350px;
+  background-color: hsl(0deg, 0%, 100%);
 }
 
 /*# sourceMappingURL=style.css.map */

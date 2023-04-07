@@ -1,4 +1,27 @@
 @use './variables' as *;
+@use './mixins' as *;
 
 .date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    &__day {
+        @include setFlex(column, center, flex-start);
+    }
+    &__month {
+        @include setFlex(column, center, flex-start);
+    }
+    &__year {
+        @include setFlex(column, center, flex-start);
+    }
+    &__label {
+        align-items: start;
+    }
+    &__input {
+        max-width: 70px;
+        min-height: 40px;
+        border: 1px solid $smokey-grey;
+        border-radius: 5px;
+    }
 }
