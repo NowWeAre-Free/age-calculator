@@ -4,7 +4,7 @@
 @use './date';
 
 body {
-    @include flex-column;
+    @include setFlex(row, center, center);
     min-height: 100vh;
     background-color: $off-white;
 }
