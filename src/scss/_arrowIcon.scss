@@ -12,6 +12,7 @@
     width: 60px;
     background-color: $purple;
     border-radius: 50%;
+    cursor: pointer;
     &::before, &::after {
         content: '';
         position: absolute;
@@ -22,6 +23,9 @@
     }
     &::after {
         left: -170%;
+    }
+    &:hover {
+        background-color: $off-black;
     }
     
 }
