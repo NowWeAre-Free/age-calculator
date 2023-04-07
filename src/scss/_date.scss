@@ -17,18 +17,22 @@
         align-items: start;
         margin-bottom: 5px;
         text-transform: uppercase;
-        font-size: .8rem;
-        font-weight: bold;
-        letter-spacing: 3px;
+        font-size: .7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
         color: $smokey-grey;
     }
     &__input {
         padding: 0 10px;
-        max-width: 100px;
-        min-height: 60px;
+        width: 100%;
+        min-height: 50px;
         border: 1px solid $smokey-grey;
         border-radius: 5px;
-        font-size: $font-size;
+        font-size: 1.2rem;
         font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            border: solid 1px $purple;
+        }
     }
 }
