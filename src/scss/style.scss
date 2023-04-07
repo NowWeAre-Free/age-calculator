@@ -2,6 +2,7 @@
 @use './mixins' as *;
 @use './variables' as *;
 @use './date';
+@use './arrowIcon';
 
 @font-face {
     font-family: Poppins;
@@ -21,7 +22,9 @@ body {
 }
 
 .main {
-    width: 100%;
-    max-width: 350px;
+    @include setFlex(column, center, center);
+    padding: 50px 30px;
+    width: 320px;
     background-color: $white;
+    border-radius: 20px 20px 80px 20px;
 }
