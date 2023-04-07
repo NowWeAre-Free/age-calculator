@@ -3,10 +3,21 @@
 @use './variables' as *;
 @use './date';
 
+@font-face {
+    font-family: Poppins;
+    src: url("/assets/fonts/Poppins-Bold.ttf");
+    src: url("/assets/fonts/Poppins-BoldItalic.ttf");
+    src: url("/assets/fonts/Poppins-ExtraBold.ttf");
+    src: url("/assets/fonts/Poppins-ExtraBoldItalic.ttf");
+    src: url("/assets/fonts/Poppins-Italic.ttf");
+    src: url("/assets/fonts/Poppins-Regular.ttf");
+}
+
 body {
     @include setFlex(row, center, center);
     min-height: 100vh;
     background-color: $off-white;
+    font-family: "Poppins", sans-serif;
 }
 
 .main {
