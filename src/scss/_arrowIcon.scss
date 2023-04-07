@@ -1,0 +1,23 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.arrow {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    padding: 20px;
+    height: 80px;
+    width: 80px;
+    background-color: $purple;
+    border-radius: 50%;
+    &.arrow::after {
+        position:absolute;
+        content:'';
+        z-index:-1px;
+        height:2px;
+        width:45%;
+        left:10px;
+        top:50%;
+        background: $smokey-grey;
+    }
+}
