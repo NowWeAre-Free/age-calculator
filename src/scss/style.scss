@@ -2,7 +2,8 @@
 @use './mixins' as *;
 @use './variables' as *;
 @use './date';
-@use './arrowIcon';
+@use './arrow';
+@use './age';
 
 @font-face {
     font-family: Poppins;
@@ -15,16 +16,19 @@
 }
 
 body {
-    @include setFlex(row, center, center);
+    @include setFlex(row);
     min-height: 100vh;
     background-color: $off-white;
     font-family: "Poppins", sans-serif;
 }
 
 .main {
-    @include setFlex(column, center, center);
+    @include setFlex(column);
     padding: 50px 30px;
     width: 320px;
     background-color: $white;
     border-radius: 20px 20px 80px 20px;
+    @media (min-width: 992px) {
+        width: 500px;
+    }
 }
