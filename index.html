@@ -16,26 +16,30 @@
     <section class="date">
       <div class="date__day">
         <label class="date__label" for="day">Day</label>
-        <input class="date__input" type="text" class="" id="day" required>
+        <input class="date__input" type="text" id="inputDay" placeholder="DD" required>
+        <span class="date__error"></span>
       </div>
       <div class="date__month">
         <label class="date__label" for="month">Month</label>
-        <input class="date__input" type="text" id="month" required>
+        <input class="date__input" type="text" id="inputMonth" placeholder="MM" required>
+        <span class="date__error"></span>
       </div>
       <div class="date__year">
         <label class="date__label" for="year">Year</label>
-        <input class="date__input" type="text" id="year" required>
+        <input class="date__input" type="text" id="inputYear" placeholder="YYYY" required>
+        <span class="date__error"></span>
       </div>
     </section>
-    <section class="arrow">
+    <section class="arrow btn">
       <img src="assets/images/icon-arrow.svg" alt="arrow submit button">
     </section>
     <section class="age">
-      <p class="age__result"><span class="age__result--color">38</span> years</p>
-      <p class="age__result"><span class="age__result--color">3</span> months</p>
-      <p class="age__result"><span class="age__result--color">26</span> days</p>
+      <p class="age__result"><span class="age__result--color" id="year">--</span> years</p>
+      <p class="age__result"><span class="age__result--color" id="month">--</span> months</p>
+      <p class="age__result"><span class="age__result--color" id="day">--</span> days</p>
     </section>
   </main>
+  <script src="src/js/app.js"></script>
 </body>
 
 </html>
