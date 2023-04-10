@@ -13,6 +13,10 @@
     background-color: $purple;
     border-radius: 50%;
     cursor: pointer;
+    @media (min-wdith: 992px) {
+        @include setFlex(column, center, flex-start);
+        margin-left: 300px;
+    }
     &::before, &::after {
         content: '';
         position: absolute;
@@ -27,5 +31,4 @@
     &:hover {
         background-color: $off-black;
     }
-    
 }
