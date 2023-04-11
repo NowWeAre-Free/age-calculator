@@ -1,6 +1,9 @@
 const inputDay = document.querySelector("#inputDay");
 const inputMonth = document.querySelector("#inputMonth");
 const inputYear = document.querySelector("#inputYear");
+const error = document.querySelectorAll(".date_error");
+
+const errorDay = document.querySelector(".errorDay");
 
 const button = document.querySelector(".btn");
 
@@ -9,11 +12,25 @@ const ageMonth = document.querySelector("#month");
 const ageDay = document.querySelector("#day");
 
 const now = new Date();
-const yearsDiff = now.getFullYear() - inputYear;
-const monthsDiff = now.getMonth() - inputMonth;
-const daysDiff = now.getDate() - inputDay;
+let yearsDiff = now.getFullYear() - inputYear.value;
+let monthsDiff = now.getMonth() - inputMonth.value;
+let daysDiff = now.getDate() - inputDay.value;
 
-const InputRequiredError = "This field is required";
-const InputDayError = "Must be a valid day";
-const InputMonthError = "Must be a valid month";
-const InputYearError = "Must be in the past";
+const inputRequiredError = "This field is required";
+const inputDayError = "Must be a valid day";
+const inputMonthError = "Must be a valid month";
+const inputYearError = "Must be in the past";
+
+const validDay = () => {
+  let value = inputDay.value;
+  if (value === "") {
+    errorDay.innerHTML = inputRequiredError;
+    return false;
+  } else if (value < 1 || value > 31) {
+    errorDay.innerHTML = inputDayError;
+  } else {
+    return true;
+  }
+};
+
+button.addEventListener("click", validDay);
