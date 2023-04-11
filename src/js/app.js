@@ -4,6 +4,8 @@ const inputYear = document.querySelector("#inputYear");
 const error = document.querySelectorAll(".date_error");
 
 const errorDay = document.querySelector(".errorDay");
+const errorMonth = document.querySelector(".errorMonth");
+const errorYear = document.querySelector(".errorYear");
 
 const button = document.querySelector(".btn");
 
@@ -33,4 +35,18 @@ const validDay = () => {
   }
 };
 
+const validMonth = () => {
+  let value = inputMonth.value;
+  if (value === "") {
+    errorMonth.innerHTML = inputRequiredError;
+    return false;
+  } else if (value < 1 || value > 12) {
+    error;
+    errorMonth.innerHTML = inputMonthError;
+  } else {
+    return true;
+  }
+};
+
 button.addEventListener("click", validDay);
+button.addEventListener("click", validMonth);
