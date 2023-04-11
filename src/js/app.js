@@ -53,13 +53,15 @@ const validYear = () => {
   if (value === "") {
     errorYear.innerHTML = inputRequiredError;
     return false;
-  } else if (value < 1900 || value > now.getFullYear) {
+  } else if (value < 1900 || value > now.getFullYear()) {
     errorYear.innerHTML = inputYearError;
   } else {
     return true;
   }
 };
 
-button.addEventListener("click", validDay);
-button.addEventListener("click", validMonth);
-button.addEventListener("click", validYear);
+button.addEventListener("click", () => {
+  validDay();
+  validMonth();
+  validYear();
+});
