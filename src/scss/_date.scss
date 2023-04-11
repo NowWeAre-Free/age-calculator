@@ -4,15 +4,20 @@
 .date {
     @include setFlex(row, center, center);
     gap: 15px;
+    position: relative;
+
     &__day {
         @include setFlex(column, center, flex-start);
     }
+
     &__month {
         @include setFlex(column, center, flex-start);
     }
+
     &__year {
         @include setFlex(column, center, flex-start);
     }
+
     &__label {
         align-items: start;
         margin-bottom: 5px;
@@ -22,6 +27,7 @@
         letter-spacing: 2px;
         color: $smokey-grey;
     }
+
     &__input {
         padding: 0 10px;
         width: 100%;
@@ -34,5 +40,11 @@
         &:hover {
             border: solid 1px $purple;
         }
+    }
+
+    &__error {
+        position: absolute;
+        top: 75px;
+        color: $light-red;
     }
 }
