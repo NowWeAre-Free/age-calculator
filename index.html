@@ -17,21 +17,25 @@
       <div class="date__day">
         <label class="date__label" for="day">Day</label>
         <input class="date__input" type="text" id="inputDay" placeholder="DD" required>
-        <span class="date__error"></span>
+        <span class="date__error errorDay"></span>
       </div>
       <div class="date__month">
         <label class="date__label" for="month">Month</label>
         <input class="date__input" type="text" id="inputMonth" placeholder="MM" required>
-        <span class="date__error"></span>
+        <span class="date__error errorMonth"></span>
       </div>
       <div class="date__year">
         <label class="date__label" for="year">Year</label>
         <input class="date__input" type="text" id="inputYear" placeholder="YYYY" required>
-        <span class="date__error"></span>
+        <span class="date__error errorYear"></span>
       </div>
     </section>
     <section class="arrow btn">
-      <img src="assets/images/icon-arrow.svg" alt="arrow submit button">
+      <div class="arrow__line"></div>
+      <button class="arrow__button">
+        <img src="assets/images/icon-arrow.svg" alt="arrow submit button">
+      </button>
+      <div class="arrow__line arrow__line--hidden"></div>
     </section>
     <section class="age">
       <p class="age__result"><span class="age__result--color" id="year">--</span> years</p>
