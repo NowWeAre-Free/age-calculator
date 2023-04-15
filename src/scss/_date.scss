@@ -3,7 +3,7 @@
 
 .date {
     @include setFlex(row, center, center);
-    gap: 15px;
+    gap: 5px;
     position: relative;
 
     &__day {
@@ -33,13 +33,16 @@
 
     &__input {
         padding: 0 10px;
-        width: 100%;
+        width: 90%;
         min-height: 50px;
         border: 1px solid $smokey-grey;
         border-radius: 5px;
         font-size: 1.2rem;
         font-weight: bold;
         cursor: pointer;
+        @media (min-width: 992px){
+            width: 70%;
+        }
         &:hover {
             border: solid 1px $purple;
         }
