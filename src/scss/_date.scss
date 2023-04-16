@@ -2,19 +2,15 @@
 @use './mixins' as *;
 
 .date {
-    @include setFlex(row, center, center);
-    gap: 5px;
+    @include setFlex(row, flex-start, center);
+    gap: 20px;
     position: relative;
-
-    &__day {
-        @include setFlex(column, center, flex-start);
+    width: 100%;
+    @media (max-width: 315px) {
+        @include setFlex(column, center, center);
     }
 
-    &__month {
-        @include setFlex(column, center, flex-start);
-    }
-
-    &__year {
+    &__day, &__month, &__year {
         @include setFlex(column, center, flex-start);
     }
 
@@ -26,6 +22,7 @@
         font-weight: 700;
         letter-spacing: 2px;
         color: $smokey-grey;
+        
         &--active {
             color: $light-red;
         }
@@ -33,19 +30,24 @@
 
     &__input {
         padding: 0 10px;
-        width: 90%;
-        min-height: 50px;
-        border: 1px solid $smokey-grey;
+        width: 100%;
+        gap: 15px;
+        min-height: 60px;
+        border: 1px solid $light-grey;
         border-radius: 5px;
         font-size: 1.2rem;
         font-weight: bold;
+        outline: none;
         cursor: pointer;
         @media (min-width: 992px){
-            width: 70%;
+            width: 150px;
+            font-size: 1.5rem;
         }
-        &:hover {
+
+        &:hover, &:focus {
             border: solid 1px $purple;
         }
+
         &--active {
             border: 1px solid $light-red;
         }
